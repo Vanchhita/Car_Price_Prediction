@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/51f8f62a6e1b40b885a324e643fb439f/artifacts
+end_time: 1682589089772
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 51f8f62a6e1b40b885a324e643fb439f
+run_name: resilient-rat-90
+run_uuid: 51f8f62a6e1b40b885a324e643fb439f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1682589086755
+status: 4
+tags: []
+user_id: Vanchhita

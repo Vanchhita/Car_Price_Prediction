@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/415d2023f3b8403ab5e51b41ad1b3152/artifacts
+end_time: 1682589024907
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 415d2023f3b8403ab5e51b41ad1b3152
+run_name: unruly-bear-368
+run_uuid: 415d2023f3b8403ab5e51b41ad1b3152
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1682589024854
+status: 4
+tags: []
+user_id: Vanchhita

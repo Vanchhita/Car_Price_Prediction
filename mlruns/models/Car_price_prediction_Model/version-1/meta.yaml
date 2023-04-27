@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1682589537916
+current_stage: None
+description: ''
+last_updated_timestamp: 1682589537916
+name: Car_price_prediction_Model
+run_id: 05698d426fc64ac8a5f975236b162799
+run_link: ''
+source: mlflow-artifacts:/0/05698d426fc64ac8a5f975236b162799/artifacts/model
+status: READY
+status_message: null
+user_id: null
+version: 1
