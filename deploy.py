@@ -67,7 +67,7 @@ model_path = mlflow.artifacts.download_artifacts(artifact_path,dst_path=os.envir
 
 # model_path = mlflow.pyfunc.load_model(f"runs:/{run_id}/model")
 
-print("MODEL PATH=",model_path)
+print("MODEL PATH :",model_path)
 
 
 ## USING BOTO3 ##
