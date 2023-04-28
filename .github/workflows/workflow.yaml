@@ -52,11 +52,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install mlflow
           pip install boto3
-
-      # #Run as a mlflow project.
-      # - name: Run mlflow project
-      #   run: |
-      #     mlflow run wine_example --env-manager=local
         
       #run python deploy_model file
       - name: Run python deploy_model.py

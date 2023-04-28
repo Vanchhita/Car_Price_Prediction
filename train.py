@@ -24,8 +24,6 @@ import mlflow
 
 
 import logging
-# mlflow_uri="http://127.0.0.1:5000"
-# mlflow.set_tracking_uri(mlflow_uri)
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
@@ -59,17 +57,7 @@ if __name__ == "__main__":
     # alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5
     alpha=0.5
     # l1_ratio = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
-    l1_ratio=0.9
-
-    
-
-# # Set the artifact URI to the new location
-#     new_artifact_location = "0/012f572be865428c9ab5b701ab2a6d1c/artifacts"
-#     mlflow.set_tracking_uri("http://localhost:5000")
-#     experiment_id = 0  # Replace with the actual experiment ID
-#     with mlflow.start_run(experiment_id=experiment_id):
-    # Your code here
-    # experiment_id = mlflow.create_experiment('mlflow-demo-ex1', artifact_location='c:/Users/v/Desktop/mlflow_demo/mlflow_s3bucket_demo/mlruns/0/')
+    l1_ratio=0.9    
     with mlflow.start_run():
         mlflow.set_tracking_uri("http://localhost:5000")
         mlflow.set_experiment("my_experiment")
@@ -100,10 +88,6 @@ if __name__ == "__main__":
         else:
             mlflow.sklearn.log_model(lr, "model")
         
-        # try:
-        #     experiment = mlflow.get_experiment_by_name('Default')
-        #     experiment_id = experiment.experiment_id
-        # except AttributeError:
         
 
 
