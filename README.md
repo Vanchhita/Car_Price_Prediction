@@ -1,6 +1,6 @@
 # mlflow-demo
 DATASET [daTA.csv]-Description 
-----------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 The dataset (daTA.csv) contains information on used cars and includes the following features:
 
 - Car_Name: The name or model of the car.
@@ -15,17 +15,18 @@ The dataset (daTA.csv) contains information on used cars and includes the follow
 
 The dataset provides information that could be used to determine the value of a used car. The car model and year provide an indication of the car's quality and features, while the current market price and selling price give insight into the car's value. The number of previous owners and total distance driven can also affect the value of the car. The fuel type, seller type, and transmission provide additional information that could impact the value of the car, such as the car's fuel efficiency and how well it was maintained.
 
------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 TRAIN.PY -Description
------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 This code loads a dataset from a CSV file named "daTA.csv" which contains information about used cars, including features such as the car's name, year, selling price, present price, kilometers driven, fuel type, seller type, transmission, and owner. It then preprocesses the data by replacing the categorical values of fuel type, seller type, and transmission with numerical values using a dictionary.
 
 The code then splits the dataset into training and testing data using the `train_test_split` function from the `sklearn.model_selection` module. It then initializes a linear regression model, fits the model to the training data, and makes predictions on the testing data. The performance of the model is evaluated using root mean squared error (RMSE), mean absolute error (MAE), and R-squared.
 
 Finally, the code logs the hyperparameters, metrics, and the trained model to the MLflow tracking server. If the tracking server is set to a file store, it logs the model to the default artifact location. Otherwise, it registers the model with the name "Car_price_prediction_Model" in the model registry.
----------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 DEPLOY.PY - Description
----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 This script appears to be a Python code that registers an MLflow model, transitions the model to the "staging" stage, downloads the registered model's artifact, uploads it to an S3 bucket, and prints the S3 URI where the model artifacts are stored. 
 
 To achieve these tasks, the code uses the following libraries and modules:
@@ -41,9 +42,9 @@ The script first sets up the experiment name, run name, AWS access keys, S3 buck
 Next, the script sets up the MLflow tracking URI and gets the run ID for the run with the specified name in the specified experiment. It then gets the model URI for the run and registers the model with the specified name. The script then transitions the model version to the "staging" stage.
 
 After registering the model, the script downloads the model's artifact and uploads it to an S3 bucket using either the `boto3` library or the AWS CLI (`subprocess`). The S3 URI where the model artifacts are stored is printed.
----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 WORKFLOW.YAML -Description
----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 This is a YAML file for a GitHub Actions workflow that defines a build job to run on the latest version of Ubuntu. The job has several steps, including:
 
 1. Checking out the repository under $GITHUB_WORKSPACE.
