@@ -42,6 +42,7 @@ The script first sets up the experiment name, run name, AWS access keys, S3 buck
 Next, the script sets up the MLflow tracking URI and gets the run ID for the run with the specified name in the specified experiment. It then gets the model URI for the run and registers the model with the specified name. The script then transitions the model version to the "staging" stage.
 
 After registering the model, the script downloads the model's artifact and uploads it to an S3 bucket using either the `boto3` library or the AWS CLI (`subprocess`). The S3 URI where the model artifacts are stored is printed.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 WORKFLOW.YAML -Description
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
